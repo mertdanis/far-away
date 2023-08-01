@@ -1,9 +1,13 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { MainContext } from "../context/context";
 
 function Packinglist() {
+  // states
+
+  const [sort, setSort] = useState("input");
+
   //context
-  const { content, data, setData, setNumber, number } = useContext(MainContext);
+  const { data, setData } = useContext(MainContext);
 
   //reset
   const handleClear = () => {
@@ -23,10 +27,28 @@ function Packinglist() {
     setData(updateState);
   };
 
+  let sortedItems;
+
+  const sortData = () => {
+    if (sort === "description") {
+      sortedItems = data.slice().sort((a, b) => a.value.localeCompare(b.value));
+    }
+    if (sort === "packed") {
+      sortedItems = data
+        .slice()
+        .sort((a, b) => Number(a.done) - Number(b.done));
+    }
+    if (sort === "input") {
+      sortedItems = data;
+    }
+  };
+
+  sortData();
+
   return (
     <div className="container-packinglist">
       <div className="container-packinglist-content">
-        {data.map((content) => {
+        {sortedItems.map((content) => {
           return (
             <div key={content.id}>
               <div className="container-packinglist-content-div">
@@ -61,13 +83,22 @@ function Packinglist() {
 
       {data.length > 0 ? (
         <div className="container-packinglist-sort">
-          <select onChange={(e) => setNumber(e.target.value)}>
-            <option value="inputorder">SORT BY INPUT ORDER</option>
-            <option value="bydescription">SORT BY DESCRIPTION</option>
-            <option value="packedstatus">SORT BY PACKED STATUS</option>
-          </select>
+          <div>
+            <select
+              onChange={(e) => {
+                setSort(e.target.value);
+              }}
+              value={sort}
+            >
+              <option value="input">SORT BY INPUT ORDER</option>
+              <option value="description">SORT BY DESCRIPTION</option>
+              <option value="packed">SORT BY PACKED STATUS</option>
+            </select>
+          </div>
 
-          <button onClick={handleClear}>CLEAR LIST</button>
+          <div>
+            <button onClick={handleClear}>CLEAR LIST</button>
+          </div>
         </div>
       ) : (
         ""

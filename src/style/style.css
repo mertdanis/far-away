@@ -8,9 +8,9 @@
 body {
   font-size: 2.4rem;
   font-family: sans-serif;
-  color: #5a3e2b;
   font-family: "Quicksand";
   font-weight: 500;
+  background-color: black;
 }
 
 html {
@@ -20,8 +20,8 @@ html {
 button,
 select,
 input {
-  background-color: #ffebb3;
-  color: #5a3e2b;
+  background-color: white;
+  color: black;
   font-family: inherit;
   border: none;
   border-radius: 10rem;
@@ -29,12 +29,18 @@ input {
   font-weight: 700;
   font-size: 1.8rem;
   cursor: pointer;
+  outline: none;
+}
+button:hover,
+select:hover,
+input:hover {
+  background-color: orange;
 }
 
 .container {
   font-size: 2rem;
-  min-height: 100vh;
-  min-width: 100vw;
+  height: 100vh;
+  width: 100vw;
 }
 .container-header {
   min-height: 20vh;
@@ -51,44 +57,65 @@ input {
   gap: 2rem;
   align-items: center;
   min-height: 10vh;
-  background-color: orangered;
-}
-.container-form button {
+  background-color: rgb(0, 0, 0);
+  border-bottom: 1px solid white;
   padding: 2rem;
-  background-color: #76c7ad;
+  position: relative;
+}
+.container-form i {
+  padding: 1rem;
+  display: inline-block;
+  cursor: pointer;
+}
+.container-form i:hover {
+  color: orange;
 }
 .container-form input {
   padding: 2rem;
   border: none;
-  border-radius: 2rem;
+  border-radius: 3rem;
+  text-transform: uppercase;
+}
+.container-form input::-moz-placeholder {
+  color: black;
+  text-transform: uppercase;
+}
+.container-form input::placeholder {
+  color: black;
+  text-transform: uppercase;
 }
 .container-form select {
-  padding: 2rem;
+  padding: 1rem;
   border: none;
   border-radius: 2rem;
 }
 .container-packinglist {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
   color: white;
-  padding: 5rem 0;
-  background-color: brown;
+  padding: 5rem 2rem;
+  background-color: rgb(0, 0, 0);
+  gap: 5rem;
   min-height: 60vh;
+  position: relative;
 }
 .container-packinglist-content {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 10rem;
+  gap: 5rem;
 }
 .container-packinglist-content-div {
   display: flex;
-  gap: 2rem;
   justify-content: center;
+  gap: 1rem;
   align-items: center;
+  background-color: orange;
+  padding: 2rem;
+  border-radius: 2rem;
+  color: black;
 }
 .container-packinglist-content-div-inside {
   display: flex;
@@ -100,28 +127,35 @@ input {
   text-decoration: line-through;
 }
 .container-packinglist-content-div-times {
-  color: red;
-  font-size: 4rem;
+  color: white;
+  font-size: 3rem;
 }
 .container-packinglist-content-div-times:hover {
   cursor: pointer;
 }
-.container-packinglist-content-div-checkbox {
-  padding: 1rem;
-  background-color: white;
-}
 .container-packinglist-sort {
-  margin-top: 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 5rem;
 }
+.container-packinglist-sort select {
+  outline: none;
+  border: none;
+  display: flex;
+  padding: 1rem rem;
+}
+.container-packinglist-sort button {
+  background-color: white;
+  font-weight: 700;
+  border: none;
+  outline: none;
+}
 .container-stats {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: blue;
-  min-height: 10vh;
+  background-color: orange;
+  height: 9.2vh;
   color: black;
 }/*# sourceMappingURL=style.css.map */

@@ -41,7 +41,7 @@ function Form() {
   };
 
   const handleKeyDown = (event) => {
-    if (event.key === "Enter") {
+    if (event.key === "Enter" && value !== "") {
       addData();
       setIndex((index) => index + 1);
     }
@@ -75,7 +75,8 @@ function Form() {
         onChange={(e) => setValue(e.target.value)}
         onKeyDown={handleKeyDown}
       />
-      <button onClick={handleClick}>ADD</button>
+
+      <i class="fa-solid fa-plus" onClick={handleClick}></i>
     </div>
   );
 }
