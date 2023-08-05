@@ -113,15 +113,23 @@ $padding: 2rem;
       justify-content: center;
       flex-wrap: wrap;
       gap: 5rem;
+      font-weight: bold;
+      text-transform: uppercase;
+
       &-div {
         display: flex;
         justify-content: center;
-        gap: 1rem;
+        gap: 2rem;
         align-items: center;
         background-color: $main-color-orange;
         padding: $padding;
         border-radius: $border-radius;
         color: $main-color-black;
+
+        &-done {
+          background-color: green;
+        }
+
         &-inside {
           display: flex;
           gap: 2rem;
@@ -148,7 +156,7 @@ $padding: 2rem;
       display: flex;
       justify-content: center;
       align-items: center;
-
+      margin-top: auto;
       gap: 5rem;
 
       & select {
@@ -172,7 +180,50 @@ $padding: 2rem;
     justify-content: center;
     align-items: center;
     background-color: $main-color-orange;
-    height: 9.2vh;
+    height: 10vh;
+
     color: $main-color-black;
+  }
+}
+
+// mobile style
+
+@media only screen and (max-width: 600px) {
+  .container {
+    &-header {
+      font-size: 1.5rem;
+      text-align: center;
+      padding: 0 0.5rem;
+    }
+
+    &-form {
+      flex-direction: column;
+      gap: 2rem;
+
+      &-div {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+      }
+    }
+
+    &-packinglist {
+      flex-direction: row;
+      justify-content: center;
+      padding: 3rem;
+      &-content {
+        gap: 3rem;
+      }
+
+      &-sort {
+        flex-direction: column;
+        gap: 3rem;
+      }
+    }
+
+    &-stats {
+      padding: 3rem;
+      text-align: center;
+    }
   }
 }

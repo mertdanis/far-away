@@ -50,33 +50,36 @@ function Form() {
   return (
     <div className="container-form">
       <p>What do you need for your trip? ✈️</p>
-      <select
-        value={number}
-        onChange={(e) => setNumber(e.target.value)}
-        name="cars"
-        id="cars"
-      >
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-      </select>
 
-      <input
-        type="text"
-        placeholder="item..."
-        value={value}
-        onChange={(e) => setValue(e.target.value)}
-        onKeyDown={handleKeyDown}
-      />
+      <div className="container-form-div">
+        <select
+          value={number}
+          onChange={(e) => setNumber(e.target.value)}
+          name="cars"
+          id="cars"
+        >
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
 
-      <i class="fa-solid fa-plus" onClick={handleClick}></i>
+        <input
+          type="text"
+          placeholder="item..."
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
+          onKeyDown={handleKeyDown}
+        />
+
+        <i class="fa-solid fa-plus" onClick={handleClick}></i>
+      </div>
     </div>
   );
 }

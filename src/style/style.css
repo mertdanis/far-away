@@ -106,16 +106,21 @@ input:hover {
   justify-content: center;
   flex-wrap: wrap;
   gap: 5rem;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 .container-packinglist-content-div {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 2rem;
   align-items: center;
   background-color: orange;
   padding: 2rem;
   border-radius: 2rem;
   color: black;
+}
+.container-packinglist-content-div-done {
+  background-color: green;
 }
 .container-packinglist-content-div-inside {
   display: flex;
@@ -137,6 +142,7 @@ input:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: auto;
   gap: 5rem;
 }
 .container-packinglist-sort select {
@@ -156,6 +162,39 @@ input:hover {
   justify-content: center;
   align-items: center;
   background-color: orange;
-  height: 9.2vh;
+  height: 10vh;
   color: black;
+}
+
+@media only screen and (max-width: 600px) {
+  .container-header {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 0 0.5rem;
+  }
+  .container-form {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .container-form-div {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+  .container-packinglist {
+    flex-direction: row;
+    justify-content: center;
+    padding: 3rem;
+  }
+  .container-packinglist-content {
+    gap: 3rem;
+  }
+  .container-packinglist-sort {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .container-stats {
+    padding: 3rem;
+    text-align: center;
+  }
 }/*# sourceMappingURL=style.css.map */
