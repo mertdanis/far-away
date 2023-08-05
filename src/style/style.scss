@@ -34,7 +34,7 @@ input {
   font-size: 1.8rem;
   cursor: pointer;
   outline: none;
-
+  transition: 300ms;
   &:hover {
     background-color: $main-color-orange;
   }
@@ -48,6 +48,7 @@ $padding: 2rem;
   font-size: 2rem;
   height: 100vh;
   width: 100vw;
+  color: white;
   &-header {
     min-height: 20vh;
     background-color: $main-color-orange;
@@ -63,16 +64,24 @@ $padding: 2rem;
     justify-content: center;
     gap: 2rem;
     align-items: center;
+    flex-wrap: wrap;
     min-height: 10vh;
     background-color: rgb(0, 0, 0);
     border-bottom: 1px solid white;
     padding: 2rem;
     position: relative;
+
+    &-div {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
     & i {
       padding: 1rem;
       display: inline-block;
       cursor: pointer;
-
+      transition: 300ms;
       &:hover {
         color: $main-color-orange;
       }
@@ -171,6 +180,10 @@ $padding: 2rem;
         font-weight: 700;
         border: none;
         outline: none;
+        transition: 300ms;
+        &:hover {
+          background-color: $main-color-orange;
+        }
       }
     }
   }
