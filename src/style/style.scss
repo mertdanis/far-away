@@ -193,8 +193,8 @@ $padding: 2rem;
     justify-content: center;
     align-items: center;
     background-color: $main-color-orange;
-    height: 10vh;
-
+    min-height: 5vh;
+    margin-top: auto;
     color: $main-color-black;
   }
 }

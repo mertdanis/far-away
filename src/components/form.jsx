@@ -1,21 +1,11 @@
-import React, { useState, useContext, useEffect, useRef } from "react";
+import { useContext } from "react";
 import { MainContext } from "../context/context";
 
 function Form() {
   // context
 
-  const {
-    number,
-    setNumber,
-    value,
-    setValue,
-    content,
-    setContent,
-    data,
-    setData,
-    index,
-    setIndex,
-  } = useContext(MainContext);
+  const { number, setNumber, value, setValue, data, setData, index, setIndex } =
+    useContext(MainContext);
 
   // reset
   const clearAfterAdd = () => {
@@ -79,7 +69,7 @@ function Form() {
           onKeyDown={handleKeyDown}
         />
 
-        <i class="fa-solid fa-plus" onClick={handleClick}></i>
+        <i className="fa-solid fa-plus" onClick={handleClick}></i>
       </div>
     </div>
   );

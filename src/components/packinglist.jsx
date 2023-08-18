@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { MainContext } from "../context/context";
 
 function Packinglist() {
@@ -66,7 +66,7 @@ function Packinglist() {
 
                 <p
                   className="container-packinglist-content-div-times"
-                  onClick={(e) => {
+                  onClick={() => {
                     const filtered = data.filter((value) => {
                       return content.id !== value.id;
                     });

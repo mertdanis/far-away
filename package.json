@@ -1,9 +1,9 @@
 {
+  "homepage": "https://mertdanis.github.io/far-away",
   "name": "far-away",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://mertdanis.github.io/far-away/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
